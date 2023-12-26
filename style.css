@@ -1,0 +1,48 @@
+body {
+    background-image: url(Flou.jpg);
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    text-align: center;
+    padding-top: 50px;
+}
+
+body h1 {
+    color: white;
+}
+
+textarea {
+    background-color: rgb(24, 24, 24);
+    border-radius: 20px;
+    width: 80%;
+    height: 150px;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    border-radius: 20px;
+}
+
+button:hover {
+    transition: 0.5s;
+    background-color: black;
+}
+
+#inputText {
+    color: white;
+}
+
+#output {
+    width: 80%;
+    height: 150px;
+    margin: 0 auto;
+    padding: 10px;
+    font-size: 16px;
+}

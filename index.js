@@ -22,8 +22,12 @@ function customCaesarizeLetter(letter, shift) {
 }
 
 function customCaesarize(text) {
+    let lineCount = 0;
     return [...text].map((letter, index) => {
-      const shift = baseShifts[index % baseShifts.length];
+      if (letter === '\n') {
+        lineCount++;
+      }
+      const shift = baseShifts[(index - lineCount) % baseShifts.length];
       return customCaesarizeLetter(letter, shift);
     }).join('');
 }
@@ -35,11 +39,15 @@ function customUncaesarizeLetter(letter, shift) {
     } else {
       return letter;
     }
-  }
+}
 
 function customUncaesarize(text) {
+    let lineCount = 0;
     return [...text].map((letter, index) => {
-      const shift = baseShifts[index % baseShifts.length];
+      if (letter === '\n') {
+        lineCount++;
+      }
+      const shift = baseShifts[(index - lineCount) % baseShifts.length];
       return customUncaesarizeLetter(letter, shift);
     }).join('');
 }
